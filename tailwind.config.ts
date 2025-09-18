@@ -19,6 +19,19 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        // Core brand colors
+        navy: {
+          deep: "hsl(var(--navy-deep))",
+          medium: "hsl(var(--navy-medium))",
+          light: "hsl(var(--navy-light))",
+        },
+        teal: {
+          primary: "hsl(var(--teal-primary))",
+          secondary: "hsl(var(--teal-secondary))",
+          muted: "hsl(var(--teal-muted))",
+        },
+        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -30,6 +43,14 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -46,7 +67,22 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          border: "hsl(var(--card-border))",
         },
+        
+        // AI and status colors
+        ai: {
+          primary: "hsl(var(--ai-primary))",
+          secondary: "hsl(var(--ai-secondary))",
+          glow: "hsl(var(--ai-glow))",
+        },
+        status: {
+          active: "hsl(var(--status-active))",
+          warning: "hsl(var(--status-warning))",
+          critical: "hsl(var(--status-critical))",
+          processing: "hsl(var(--status-processing))",
+        },
+        
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +93,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
