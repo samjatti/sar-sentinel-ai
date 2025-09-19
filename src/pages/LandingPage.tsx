@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { AIAgentIndicator } from "@/components/AIAgentIndicator";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { 
   Upload, 
   Map, 
@@ -61,10 +62,21 @@ export default function LandingPage() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               AI-powered SAR image analysis for deforestation, urban sprawl, and flood zones. 
               Empowering government and disaster response agencies with real-time insights.
             </p>
+
+            {/* Real-time Status */}
+            <div className="flex items-center justify-center gap-4 mb-12 p-4 bg-white/10 backdrop-blur rounded-lg border border-white/20 max-w-2xl mx-auto">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-accent rounded-full animate-pulse" />
+                <span className="text-white font-medium">Live Analysis Active</span>
+              </div>
+              <div className="text-accent text-sm">
+                Monitoring 847 regions worldwide • 24/7 real-time processing
+              </div>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -158,6 +170,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
