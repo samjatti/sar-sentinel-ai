@@ -3,13 +3,15 @@ import { Button } from "@/components/ui/button";
 import { AIAgentIndicator } from "@/components/AIAgentIndicator";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Progress } from "@/components/ui/progress";
+import { Link } from "react-router-dom";
 import { 
   Upload, 
   CloudUpload, 
   FileImage, 
   CheckCircle, 
   Loader2,
-  AlertCircle
+  AlertCircle,
+  ArrowLeft
 } from "lucide-react";
 
 export default function UploadPage() {
@@ -45,6 +47,12 @@ export default function UploadPage() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
+            <Link to="/">
+              <Button variant="outline" size="sm">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Home
+              </Button>
+            </Link>
             <h1 className="text-3xl font-bold text-primary">SAR Image Upload & Preprocessing</h1>
             <AIAgentIndicator 
               label="Preprocessing Bot" 

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { AIAgentIndicator } from "@/components/AIAgentIndicator";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Slider } from "@/components/ui/slider";
+import { Link } from "react-router-dom";
 import { 
   Play, 
   Pause, 
@@ -13,7 +14,8 @@ import {
   Layers,
   Filter,
   MapPin,
-  Clock
+  Clock,
+  ArrowLeft
 } from "lucide-react";
 
 export default function MapPage() {
@@ -41,6 +43,12 @@ export default function MapPage() {
         {/* Header */}
         <div className="mb-6">
           <div className="flex items-center gap-4 mb-4">
+            <Link to="/">
+              <Button variant="outline" size="sm">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Home
+              </Button>
+            </Link>
             <h1 className="text-3xl font-bold text-primary">Interactive Map Visualization</h1>
             <AIAgentIndicator label="GeoMapper" status="active" />
           </div>

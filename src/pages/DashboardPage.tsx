@@ -4,6 +4,7 @@ import { AIAgentIndicator } from "@/components/AIAgentIndicator";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
+import { Link } from "react-router-dom";
 import { 
   Filter, 
   Trees, 
@@ -12,7 +13,8 @@ import {
   Zap,
   TrendingUp,
   AlertTriangle,
-  CheckCircle
+  CheckCircle,
+  ArrowLeft
 } from "lucide-react";
 
 export default function DashboardPage() {
@@ -33,6 +35,12 @@ export default function DashboardPage() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
+            <Link to="/">
+              <Button variant="outline" size="sm">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Home
+              </Button>
+            </Link>
             <h1 className="text-3xl font-bold text-primary">Change Detection Dashboard</h1>
             <AIAgentIndicator label="Change Detection Bot" status="active" />
           </div>
